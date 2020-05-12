@@ -1,0 +1,32 @@
+section.mars {
+  padding-top: 5rem;
+  width: 100%;
+  height: 50rem;
+}
+
+section.mars div.image {
+  margin: auto;
+}
+
+section.mars img {
+  width: 50rem;
+  height: 50rem;
+}
+
+div.mars-gallery {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.mars-gallery img {
+  width: 20rem;
+  height: 20rem;
+}
+
+div.mars-card {
+  display: flex;
+  flex-direction: column;
+}
