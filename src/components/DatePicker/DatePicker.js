@@ -5,7 +5,12 @@ const DatePicker = (props) => {
   const [date, setDate] = useState(props.date);
   return (
     <section className="datePicker">
-      <form onSubmit={(e) => e.preventDefault()}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          props.onSubmit(date);
+        }}
+      >
         <label htmlFor="date">Date:</label>
         <input
           type="date"
@@ -15,9 +20,7 @@ const DatePicker = (props) => {
           name="date"
           id="date"
         />
-        <button type="submit" onClick={props.onSubmit}>
-          >
-        </button>
+        <button type="submit">></button>
       </form>
     </section>
   );

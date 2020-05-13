@@ -15,18 +15,39 @@ section.mars img {
 
 div.mars-gallery {
   margin: auto;
-  width: 100%;
+  width: 50rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 div.mars-gallery img {
   width: 20rem;
   height: 20rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 div.mars-card {
   display: flex;
   flex-direction: column;
+}
+
+div.mars-gallery img.loading {
+  display: none;
+}
+
+div.mars-gallery img.loading-gif {
+  width: auto !important;
+  height: auto !important;
+}
+
+div.mars-gallery div.image {
+  margin: auto;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

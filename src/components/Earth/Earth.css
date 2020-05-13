@@ -6,9 +6,23 @@ section.earth {
 
 section.earth div.image {
   margin: auto;
-}
-
-section.earth img {
   width: 50rem;
   height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.earth div.image img {
+  width: 50rem;
+  height: 50rem;
+}
+
+section.earth div.image img.loading-gif {
+  width: auto !important;
+  height: auto !important;
+}
+
+section.earth div.image img.loading {
+  display: none;
 }
