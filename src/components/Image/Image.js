@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Spinner } from "reactstrap";
 const Image = (props) => {
   const [loaderClass] = useState("loading-gif");
   const [imageClass] = useState("loading");
@@ -15,11 +15,7 @@ const Image = (props) => {
 
   return (
     <div className="image">
-      <img
-        src="./loading.gif"
-        className={isLoading ? loaderClass : imageClass}
-        alt="..."
-      />
+      <Spinner className={isLoading ? loaderClass : imageClass} alt="..." />
       <img
         src={props.src}
         className={isLoading ? imageClass : ""}

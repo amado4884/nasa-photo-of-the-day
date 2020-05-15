@@ -4,7 +4,7 @@ import Image from "../Image/Image";
 const MarsCard = (props) => {
   return (
     <div className="mars-card">
-      <span className="description">{props.image.camera.full_name}</span>
+      <h4 className="description">{props.image.camera.full_name}</h4>
       <Image
         src={props.image.img_src}
         alt={`Mars camera: ${props.image.camera.full_name}`}
