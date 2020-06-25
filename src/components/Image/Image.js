@@ -1,8 +1,27 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 import { Spinner } from "reactstrap";
+
+const ImageStyled = styled.img`
+  width: 50rem;
+  height: 50rem;
+  ${(props) => (!props.visible ? `display:none` : null)}
+`;
+
+const SpinnerStyled = styled.div`
+  ${(props) => (!props.visible ? `display:none` : null)}
+`;
+
+const DivStyled = styled.div`
+  margin: auto;
+  width: 50rem;
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Image = (props) => {
-  const [loaderClass] = useState("loading-gif");
-  const [imageClass] = useState("loading");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -14,15 +33,12 @@ const Image = (props) => {
   };
 
   return (
-    <div className="image">
-      <Spinner className={isLoading ? loaderClass : imageClass} alt="..." />
-      <img
-        src={props.src}
-        className={isLoading ? imageClass : ""}
-        alt={props.alt}
-        onLoad={doneLoading}
-      />
-    </div>
+    <DivStyled>
+      <SpinnerStyled visible={isLoading}>
+        <Spinner alt="..." />
+      </SpinnerStyled>
+      <ImageStyled src={props.src} alt={props.alt} onLoad={doneLoading} visible={!isLoading} />
+    </DivStyled>
   );
 };
 

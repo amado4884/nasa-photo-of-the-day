@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import "./DatePicker.css";
+import styled from "styled-components";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+
+const DatePickerStyled = styled.section`
+  width: 50rem;
+  margin: auto;
+`;
 
 const DatePicker = (props) => {
   const [date, setDate] = useState(props.date);
   return (
-    <section className="datePicker">
+    <DatePickerStyled>
       <Form
         inline
         onSubmit={(e) => {
@@ -30,7 +35,7 @@ const DatePicker = (props) => {
           </Button>
         </FormGroup>
       </Form>
-    </section>
+    </DatePickerStyled>
   );
 };
 export default DatePicker;

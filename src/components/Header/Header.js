@@ -1,11 +1,15 @@
 import React from "react";
-import "./Header.css";
+import styled from "styled-components";
+
+const StyledHeader = styled.header`
+  margin: 2rem;
+`;
 
 const Header = (props) => {
   return (
-    <header className="Header">
+    <StyledHeader>
       <h1>Welcome to D-EARS (Date-Earth & Mars)</h1>
-    </header>
+    </StyledHeader>
   );
 };
 

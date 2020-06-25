@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 import config from "../../config";
 import Image from "../Image/Image";
-import "./Earth.css";
 import Axios from "axios";
+
+const EarthStyled = styled.section`
+  padding-top: 5rem;
+  width: 100%;
+  height: 50rem;
+`;
 
 const Earth = (props) => {
   const [url, setUrl] = useState("");
@@ -25,10 +31,10 @@ const Earth = (props) => {
   }, [props.date]);
 
   return (
-    <section className="earth">
+    <EarthStyled>
       <h3>The beautiful earth on the day: {props.date}</h3>
       <Image src={url} />
-    </section>
+    </EarthStyled>
   );
 };
 
